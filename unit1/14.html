@@ -1,0 +1,55 @@
+<!-- Write an HTML code to design the exam registration form for IGNTU. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNTU Exam Registration Form</title>
+    <style>
+        /* Add CSS styling for the form */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="submit_igntu_exam_registration.php" method="post">
+        <label for="examType">Exam Type:</label>
+        <select id="examType" name="examType" required>
+            <option value="UG">Undergraduate</option>
+            <option value="PG">Postgraduate</option>
+        </select>
+
+        <label for="name">Name</label><input type="text" name="name" id="name">
+        <input type="email" name="email" id="email">
+        <input type="password" name="password" id="password">
+        <input type="radio" name="gender" id="gender">
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

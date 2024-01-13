@@ -1,0 +1,68 @@
+<!-- .Write a CSS code to apply different border, margin, padding, width, height related
+property to display different types of image and their description in web page.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Display</title>
+  <style>
+    /* Apply styles to the entire web page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    /* Style for image container */
+    .image-container {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid #333;
+      width: 300px;
+      text-align: center;
+    }
+
+    /* Style for images */
+    .landscape-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .portrait-image {
+      width: auto;
+      height: 300px;
+      border-radius: 8px;
+    }
+
+    /* Style for image descriptions */
+    .image-description {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Additional styles can be added for different types of images */
+
+  </style>
+</head>
+<body>
+  <h1>Image Display</h1>
+
+  <!-- Image 1 -->
+  <div class="image-container">
+    <img src="landscape.jpg" alt="Landscape Image" class="landscape-image">
+    <p class="image-description">Beautiful Landscape</p>
+  </div>
+
+  <!-- Image 2 -->
+  <div class="image-container">
+    <img src="portrait.jpg" alt="Portrait Image" class="portrait-image">
+    <p class="image-description">Portrait Photography</p>
+  </div>
+
+  <!-- Add more image containers for additional images -->
+
+</body>
+</html>
