@@ -1,1 +1,54 @@
 <!-- 32. Write a JavaScript code to build area calculator. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function calculateRectangleArea() {
+      var length = parseFloat(document.getElementById('rectangleLength').value) || 0;
+      var width = parseFloat(document.getElementById('rectangleWidth').value) || 0;
+
+      var area = length * width;
+      alert('Rectangle Area: ' + area);
+    }
+
+    function calculateCircleArea() {
+      var radius = parseFloat(document.getElementById('circleRadius').value) || 0;
+
+      var area = Math.PI * Math.pow(radius, 2);
+      alert('Circle Area: ' + area.toFixed(2));
+    }
+
+    function calculateTriangleArea() {
+      var base = parseFloat(document.getElementById('triangleBase').value) || 0;
+      var height = parseFloat(document.getElementById('triangleHeight').value) || 0;
+
+      var area = 0.5 * base * height;
+      alert('Triangle Area: ' + area);
+    }
+  </script>
+</head>
+<body>
+
+  <h3>Rectangle Area Calculator:</h3>
+  <label for="rectangleLength">Length:</label>
+  <input type="number" id="rectangleLength">
+  <label for="rectangleWidth">Width:</label>
+  <input type="number" id="rectangleWidth">
+  <button onclick="calculateRectangleArea()">Calculate Rectangle Area</button>
+
+  <h3>Circle Area Calculator:</h3>
+  <label for="circleRadius">Radius:</label>
+  <input type="number" id="circleRadius">
+  <button onclick="calculateCircleArea()">Calculate Circle Area</button>
+
+  <h3>Triangle Area Calculator:</h3>
+  <label for="triangleBase">Base:</label>
+  <input type="number" id="triangleBase">
+  <label for="triangleHeight">Height:</label>
+  <input type="number" id="triangleHeight">
+  <button onclick="calculateTriangleArea()">Calculate Triangle Area</button>
+
+</body>
+</html>

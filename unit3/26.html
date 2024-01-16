@@ -1,1 +1,37 @@
 <!-- 26. write a JavaScript code for email validation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function validateCredentials() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Password validation: At least 8 characters, one uppercase letter, one lowercase letter, and one digit
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+      if (emailRegex.test(email) && passwordRegex.test(password)) {
+        alert('Credentials are valid!');
+      } else {
+        alert('Credentials are not valid. Please enter a valid email and follow the password criteria.');
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password">
+
+  <button onclick="validateCredentials()">Validate Credentials</button>
+
+</body>
+</html>

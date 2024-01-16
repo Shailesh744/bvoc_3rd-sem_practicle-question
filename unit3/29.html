@@ -1,1 +1,24 @@
 <!-- 29. Write a JavaScript code to convert small latter to capital latter. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function convertToUpperCase() {
+      var inputText = document.getElementById('inputText').value;
+      var textInUpperCase = inputText.toUpperCase();
+
+      alert('Text in uppercase: ' + textInUpperCase);
+    }
+  </script>
+</head>
+<body>
+
+  <label for="inputText">Input Text:</label>
+  <input type="text" id="inputText">
+
+  <button onclick="convertToUpperCase()">Convert to Uppercase</button>
+
+</body>
+</html>

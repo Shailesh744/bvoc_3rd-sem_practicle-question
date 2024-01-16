@@ -1,1 +1,24 @@
 <!-- 28. Write a JavaScript code to remove space inside a text. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function removeSpaces() {
+      var inputText = document.getElementById('inputText').value;
+      var textWithoutSpaces = inputText.replace(/\s/g, ''); // Remove all spaces
+
+      alert('Text without spaces: ' + textWithoutSpaces);
+    }
+  </script>
+</head>
+<body>
+
+  <label for="inputText">Input Text:</label>
+  <input type="text" id="inputText">
+
+  <button onclick="removeSpaces()">Remove Spaces</button>
+
+</body>
+</html>

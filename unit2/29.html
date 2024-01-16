@@ -1,1 +1,39 @@
 <!-- Write a CSS code to design new bullets by using CSS.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    li::before {
+      content: "\2022"; /* Unicode character for a bullet (•) */
+      color: #3498db; /* Bullet color */
+      font-size: 1.5em; /* Bullet size */
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li>This is the first item.</li>
+    <li>This is the second item.</li>
+    <li>This is the third item.</li>
+  </ul>
+
+</body>
+</html>

@@ -1,1 +1,43 @@
 <!-- 31. Write a JavaScript code to build student mark percent calculator out of five subject. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function calculatePercentage() {
+      var subject1 = parseFloat(document.getElementById('subject1').value) || 0;
+      var subject2 = parseFloat(document.getElementById('subject2').value) || 0;
+      var subject3 = parseFloat(document.getElementById('subject3').value) || 0;
+      var subject4 = parseFloat(document.getElementById('subject4').value) || 0;
+      var subject5 = parseFloat(document.getElementById('subject5').value) || 0;
+
+      var totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+      var totalSubjects = 5;
+      var percentage = (totalMarks / (totalSubjects * 100)) * 100;
+
+      alert('Percentage: ' + percentage.toFixed(2) + '%');
+    }
+  </script>
+</head>
+<body>
+
+  <label for="subject1">Subject 1:</label>
+  <input type="number" id="subject1">
+
+  <label for="subject2">Subject 2:</label>
+  <input type="number" id="subject2">
+
+  <label for="subject3">Subject 3:</label>
+  <input type="number" id="subject3">
+
+  <label for="subject4">Subject 4:</label>
+  <input type="number" id="subject4">
+
+  <label for="subject5">Subject 5:</label>
+  <input type="number" id="subject5">
+
+  <button onclick="calculatePercentage()">Calculate Percentage</button>
+
+</body>
+</html>

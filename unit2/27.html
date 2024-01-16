@@ -1,2 +1,75 @@
 <!-- Write a CSS code to demonstrated position component of CSS through different tag of
 HTML.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .static {
+      position: static;
+      background-color: lightblue;
+    }
+
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background-color: lightgreen;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: lightcoral;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: lightgoldenrodyellow;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: lightcyan;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="static">
+    <h2>Static Position</h2>
+    <p>This is a static positioned element.</p>
+  </div>
+
+  <div class="relative">
+    <h2>Relative Position</h2>
+    <p>This is a relatively positioned element.</p>
+  </div>
+
+  <div class="absolute">
+    <h2>Absolute Position</h2>
+    <p>This is an absolutely positioned element.</p>
+  </div>
+
+  <div class="fixed">
+    <h2>Fixed Position</h2>
+    <p>This is a fixed positioned element.</p>
+  </div>
+
+  <div class="sticky">
+    <h2>Sticky Position</h2>
+    <p>This is a sticky positioned element.</p>
+  </div>
+
+</body>
+</html>

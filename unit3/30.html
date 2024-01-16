@@ -1,1 +1,24 @@
 <!-- 30. Write a JavaScript code to convert capital letters to small letter. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function convertToLowerCase() {
+      var inputText = document.getElementById('inputText').value;
+      var textInLowerCase = inputText.toLowerCase();
+
+      alert('Text in lowercase: ' + textInLowerCase);
+    }
+  </script>
+</head>
+<body>
+
+  <label for="inputText">Input Text:</label>
+  <input type="text" id="inputText">
+
+  <button onclick="convertToLowerCase()">Convert to Lowercase</button>
+
+</body>
+</html>

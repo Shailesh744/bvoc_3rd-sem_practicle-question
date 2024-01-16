@@ -1,2 +1,70 @@
 <!-- .Write a CSS code to demonstrated transition component of CSS through different tag of
 HTML.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styling for the elements */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Transition effect on a button */
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .transition-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .transition-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Transition effect on a div */
+        .transition-div {
+            width: 200px;
+            height: 200px;
+            background-color: #2ecc71;
+            margin: 0 auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .transition-div:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <title>CSS Transition Example</title>
+</head>
+<body>
+    <!-- Transition effect on a button -->
+    <div class="button-container">
+        <button class="transition-button">Hover Me</button>
+    </div>
+
+    <!-- Transition effect on a div -->
+    <div class="transition-div">Hover Me</div>
+</body>
+</html>
