@@ -1,1 +1,42 @@
 <!-- 34. Write a JavaScript code to show department name according to faculty name selection. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function showDepartment() {
+      var facultySelect = document.getElementById('facultySelect');
+      var departmentDisplay = document.getElementById('departmentDisplay');
+
+      // Get the selected value from the faculty dropdown
+      var selectedFaculty = facultySelect.value;
+
+      // Define department names based on faculty selection
+      var departmentNames = {
+        'engineering': 'Computer Science, Electrical Engineering, Mechanical Engineering, Civil Engineering',
+        'science': 'Physics, Chemistry, Biology',
+        'arts': 'History, Literature, Philosophy'
+        // Add more faculties and corresponding department names as needed
+      };
+
+      // Display the corresponding department name
+      departmentDisplay.textContent = departmentNames[selectedFaculty] || 'Select a faculty';
+    }
+  </script>
+</head>
+<body>
+
+  <label for="facultySelect">Select Faculty:</label>
+  <select id="facultySelect" onchange="showDepartment()">
+    <option value="engineering">Engineering</option>
+    <option value="science">Science</option>
+    <option value="arts">Arts</option>
+    <!-- Add more faculty options as needed -->
+  </select>
+
+  <h3>Department:</h3>
+  <p id="departmentDisplay">Select a faculty to see the department.</p>
+
+</body>
+</html>

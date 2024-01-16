@@ -1,1 +1,52 @@
 <!-- 42. Write a JavaScript code to implement different types of mouse related event. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #mouseTarget {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function handleMouseOver() {
+      document.getElementById('mouseTarget').style.backgroundColor = '#e74c3c';
+    }
+
+    function handleMouseOut() {
+      document.getElementById('mouseTarget').style.backgroundColor = '#3498db';
+    }
+
+    function handleMouseDown() {
+      document.getElementById('mouseTarget').style.backgroundColor = '#2ecc71';
+    }
+
+    function handleMouseUp() {
+      document.getElementById('mouseTarget').style.backgroundColor = '#3498db';
+    }
+
+    function handleClick() {
+      alert('Mouse Clicked!');
+    }
+  </script>
+</head>
+<body>
+
+<div id="mouseTarget"
+     onmouseover="handleMouseOver()"
+     onmouseout="handleMouseOut()"
+     onmousedown="handleMouseDown()"
+     onmouseup="handleMouseUp()"
+     onclick="handleClick()">
+  Hover and Click Me
+</div>
+
+</body>
+</html>

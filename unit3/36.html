@@ -1,1 +1,43 @@
 <!-- 36. Write a JavaScript code to implement user authentication. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Dummy user data for authentication
+    var users = [
+      { username: 'user1', password: 'password1' },
+      { username: 'user2', password: 'password2' },
+      { username: 'user3', password: 'password3' }
+    ];
+
+    function authenticateUser() {
+      var usernameInput = document.getElementById('username').value;
+      var passwordInput = document.getElementById('password').value;
+
+      // Check if the entered username and password match any user in the array
+      var authenticatedUser = users.find(function(user) {
+        return user.username === usernameInput && user.password === passwordInput;
+      });
+
+      if (authenticatedUser) {
+        alert('Authentication successful! Welcome, ' + authenticatedUser.username + '!');
+      } else {
+        alert('Authentication failed. Invalid username or password.');
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password">
+
+  <button onclick="authenticateUser()">Login</button>
+
+</body>
+</html>

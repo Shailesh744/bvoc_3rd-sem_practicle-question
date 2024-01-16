@@ -1,1 +1,68 @@
 <!-- 39. Write a JavaScript code to create a countdown timer. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #timer {
+      font-size: 36px;
+    }
+  </style>
+  <script>
+    function startCountdown(durationInSeconds) {
+      let timerDisplay = document.getElementById('timer');
+      let duration = durationInSeconds;
+      let intervalId;
+
+      function updateDisplay() {
+        let minutes = Math.floor(duration / 60);
+        let seconds = duration % 60;
+
+        // Add leading zero if needed
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        timerDisplay.textContent = `${minutes}:${seconds}`;
+      }
+
+      function countdown() {
+        if (duration > 0) {
+          duration--;
+          updateDisplay();
+        } else {
+          clearInterval(intervalId);
+          timerDisplay.textContent = 'Time's up!';
+        }
+      }
+
+      // Initial display
+      updateDisplay();
+
+      // Start countdown interval
+      intervalId = setInterval(countdown, 1000);
+    }
+  </script>
+</head>
+<body>
+
+<div id="timer"></div>
+
+<script>
+  // Start the countdown with a duration of 5 minutes (300 seconds)
+  startCountdown(300);
+</script>
+
+</body>
+</html>

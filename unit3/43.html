@@ -1,1 +1,30 @@
 <!-- 43. Write a JavaScript code to implement different types of keyboard related event. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function handleKeyDown(event) {
+      alert(`Key Down: ${event.key}`);
+    }
+
+    function handleKeyUp(event) {
+      alert(`Key Up: ${event.key}`);
+    }
+
+    function handleKeyPress(event) {
+      alert(`Key Press: ${event.key}`);
+    }
+  </script>
+</head>
+<body>
+
+<input type="text"
+       placeholder="Type here"
+       onkeydown="handleKeyDown(event)"
+       onkeyup="handleKeyUp(event)"
+       onkeypress="handleKeyPress(event)">
+
+</body>
+</html>

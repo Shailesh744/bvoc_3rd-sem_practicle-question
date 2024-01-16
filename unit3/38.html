@@ -1,1 +1,128 @@
 <!-- 38. Write a JavaScript code to create an interactive quiz. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .quiz-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .options li {
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const quizData = [
+      {
+        question: 'What is the capital of France?',
+        options: ['Paris', 'Berlin', 'Madrid', 'Rome'],
+        correctAnswer: 'Paris'
+      },
+      {
+        question: 'Which planet is known as the Red Planet?',
+        options: ['Earth', 'Mars', 'Jupiter', 'Venus'],
+        correctAnswer: 'Mars'
+      },
+      {
+        question: 'Who wrote "Romeo and Juliet"?',
+        options: ['Charles Dickens', 'Jane Austen', 'William Shakespeare', 'Leo Tolstoy'],
+        correctAnswer: 'William Shakespeare'
+      }
+    ];
+
+    let currentQuestion = 0;
+    let userAnswers = [];
+    const resultContainer = document.getElementById('result');
+
+    function loadQuestion() {
+      const questionContainer = document.getElementById('question');
+      const optionsContainer = document.getElementById('options');
+
+      questionContainer.textContent = quizData[currentQuestion].question;
+
+      optionsContainer.innerHTML = '';
+      quizData[currentQuestion].options.forEach((option, index) => {
+        const li = document.createElement('li');
+        li.textContent = option;
+        li.onclick = () => selectAnswer(option);
+        optionsContainer.appendChild(li);
+      });
+    }
+
+    function selectAnswer(answer) {
+      userAnswers[currentQuestion] = answer;
+      nextQuestion();
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      const correctAnswers = quizData.filter((question, index) => question.correctAnswer === userAnswers[index]);
+      resultContainer.textContent = `You got ${correctAnswers.length} out of ${quizData.length} questions right!`;
+    }
+
+    window.onload = loadQuestion;
+  </script>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Quiz Time!</h2>
+  <div id="question" class="question"></div>
+  <ul id="options" class="options"></ul>
+  <button onclick="nextQuestion()">Next</button>
+  <div id="result"></div>
+</div>
+
+</body>
+</html>
