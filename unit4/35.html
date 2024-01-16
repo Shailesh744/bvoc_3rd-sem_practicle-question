@@ -1,1 +1,36 @@
 <!-- 35.Write a JQuery code to demonstrated key press event in particular class and id. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a keypress event to elements with a specific class (in this case, elements with class 'keypressClass')
+      $(".keypressClass").keypress(function(event) {
+        alert("Key Press Event in Class - Key Code: " + event.keyCode);
+      });
+
+      // Attach a keypress event to an element with a specific ID (in this case, an element with ID 'keypressElement')
+      $("#keypressElement").keypress(function(event) {
+        alert("Key Press Event in ID - Key Code: " + event.keyCode);
+      });
+    });
+  </script>
+  <style>
+    .keypressClass {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="keypressClass">Key Press in Class</div>
+<input type="text" id="keypressElement" placeholder="Type here">
+
+</body>
+</html>

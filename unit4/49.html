@@ -1,1 +1,49 @@
 <!-- 49.Write a JQuery code to demonstrated toggleclass and switchclass method. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using toggleClass method
+      $("#toggleClassBtn").click(function() {
+        $("#elementToToggle").toggleClass("highlight");
+      });
+
+      // Using a simple replacement for switchClass
+      $("#switchClassBtn").click(function() {
+        var element = $("#elementToSwitch");
+        if (element.hasClass("class1")) {
+          element.removeClass("class1").addClass("class2");
+        } else {
+          element.removeClass("class2").addClass("class1");
+        }
+      });
+    });
+  </script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+
+    .class1 {
+      color: blue;
+    }
+
+    .class2 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div id="elementToToggle">Click to toggle class</div>
+<button id="toggleClassBtn">Toggle Class</button>
+
+<div id="elementToSwitch" class="class1">Click to switch class</div>
+<button id="switchClassBtn">Switch Class</button>
+
+</body>
+</html>

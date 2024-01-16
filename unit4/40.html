@@ -1,2 +1,50 @@
 <!-- 40.Write a JQuery code to demonstrated key press event in combination of multiple class and
 id. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a keypress event to multiple elements with different classes and IDs
+      $(".keypressClass1, .keypressClass2, #keypressElement").keypress(function(event) {
+        var elementIdentifier = "";
+        
+        if ($(this).hasClass("keypressClass1")) {
+          elementIdentifier = "Class 1";
+        } else if ($(this).hasClass("keypressClass2")) {
+          elementIdentifier = "Class 2";
+        } else if ($(this).attr("id") === "keypressElement") {
+          elementIdentifier = "ID";
+        }
+
+        alert("Key Press Event - " + elementIdentifier + ", Key Code: " + event.keyCode);
+      });
+    });
+  </script>
+  <style>
+    .keypressClass1 {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .keypressClass2 {
+      padding: 10px;
+      background-color: #e74c3c;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="keypressClass1">Key Press in Class 1</div>
+<div class="keypressClass2">Key Press in Class 2</div>
+<input type="text" id="keypressElement" placeholder="Type here">
+
+</body>
+</html>

@@ -1,1 +1,26 @@
 <!-- 39.Write a JQuery code to demonstrated key down event in combination of multiple tag and id. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a keydown event to multiple elements with different tags and IDs
+      $("input#inputField, textarea#textareaField, #myDiv").keydown(function(event) {
+        var elementType = $(this).prop("tagName");
+        var elementId = $(this).attr("id");
+        alert("Key Down Event - Tag: " + elementType + ", ID: " + elementId + ", Key Code: " + event.keyCode);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<input type="text" id="inputField" placeholder="Type here">
+<textarea id="textareaField" placeholder="Type here"></textarea>
+<div id="myDiv" style="padding: 10px; background-color: #3498db; color: #fff; cursor: pointer;">Type here (Div)</div>
+
+</body>
+</html>

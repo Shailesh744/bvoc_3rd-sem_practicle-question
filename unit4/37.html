@@ -1,1 +1,39 @@
 <!-- 37.Write a JQuery code to demonstrated double click event in multiple class together. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a double click event to multiple elements with different classes
+      $(".doubleClickClass1, .doubleClickClass2").dblclick(function() {
+        var className = $(this).attr("class");
+        alert("Double Clicked - Class: " + className);
+      });
+    });
+  </script>
+  <style>
+    .doubleClickClass1 {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .doubleClickClass2 {
+      padding: 10px;
+      background-color: #e74c3c;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="doubleClickClass1">Double Click me (Class 1)</div>
+<div class="doubleClickClass2">Double Click me (Class 2)</div>
+
+</body>
+</html>

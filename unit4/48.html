@@ -1,1 +1,37 @@
 <!-- 48.Write a JQuery code to demonstrated hasclass and contains method. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using hasClass method
+      var hasClassResult = $("#elementToCheck").hasClass("targetClass");
+      $("#hasClassResult").text("Has Class 'targetClass': " + hasClassResult);
+
+      // Using contains method
+      var containsTextResult = $("#elementToCheck:contains('Specific Text')").length > 0;
+      $("#containsTextResult").text("Contains 'Specific Text': " + containsTextResult);
+    });
+  </script>
+  <style>
+    #elementToCheck {
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div id="elementToCheck" class="targetClass">
+  This element has the target class.
+  <p>Some Specific Text</p>
+</div>
+
+<p id="hasClassResult"></p>
+<p id="containsTextResult"></p>
+
+</body>
+</html>

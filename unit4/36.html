@@ -1,1 +1,25 @@
 <!-- 36.Write a JQuery code to demonstrated click event in multiple tag together. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a click event to multiple elements of different tags
+      $("button, a, div").click(function() {
+        var elementType = $(this).prop("tagName");
+        alert("Element Clicked - Tag: " + elementType);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<button>Click me (Button)</button>
+<a href="#">Click me (Link)</a>
+<div style="padding: 10px; background-color: #3498db; color: #fff; cursor: pointer;">Click me (Div)</div>
+
+</body>
+</html>

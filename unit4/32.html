@@ -1,1 +1,31 @@
 <!-- 32.Write a JQuery code to demonstrated double click event in particular class. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a double click event to elements with a specific class (in this case, elements with class 'doubleClickClass')
+      $(".doubleClickClass").dblclick(function() {
+        alert("Double Clicked!");
+      });
+    });
+  </script>
+  <style>
+    .doubleClickClass {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="doubleClickClass">Double Click me</div>
+<div class="doubleClickClass">Double Click me too</div>
+
+</body>
+</html>

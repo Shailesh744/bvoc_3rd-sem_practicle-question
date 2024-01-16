@@ -1,1 +1,43 @@
 <!-- 51.Write a JQuery code to demonstrated each method. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using each method
+      $("#listItems li").each(function(index, element) {
+        // index is the current index in the iteration
+        // element is the current DOM element being processed
+
+        // Display the index and text of each list item
+        console.log("Index: " + index + ", Text: " + $(element).text());
+      });
+    });
+  </script>
+  <style>
+    #listItems {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #listItems li {
+      margin-bottom: 5px;
+      background-color: #f2f2f2;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<ul id="listItems">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>
+
+</body>
+</html>

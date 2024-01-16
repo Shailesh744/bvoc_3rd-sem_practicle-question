@@ -1,2 +1,51 @@
 <!-- 42.Write a JQuery code to demonstrated show and hide methods using single and multiple
 selector]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using single selector for show
+      $("#showSingle").click(function() {
+        $("#contentSingle").show();
+      });
+
+      // Using single selector for hide
+      $("#hideSingle").click(function() {
+        $("#contentSingle").hide();
+      });
+
+      // Using multiple selector for show
+      $(".showMultiple").click(function() {
+        $(".contentMultiple").show();
+      });
+
+      // Using multiple selector for hide
+      $(".hideMultiple").click(function() {
+        $(".contentMultiple").hide();
+      });
+    });
+  </script>
+  <style>
+    #contentSingle, .contentMultiple {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<button id="showSingle">Show Content (Single)</button>
+<button id="hideSingle">Hide Content (Single)</button>
+<div id="contentSingle">Initial Content (Single)</div>
+
+<button class="showMultiple">Show Content (Multiple)</button>
+<button class="hideMultiple">Hide Content (Multiple)</button>
+<div class="contentMultiple">Initial Content (Multiple)</div>
+
+</body>
+</html>

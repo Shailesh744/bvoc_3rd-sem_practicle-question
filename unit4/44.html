@@ -1,1 +1,47 @@
 <!-- 44.Write a JQuery code to demonstrated attr methods using single and multiple selector]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using single selector for focusin
+      $("#inputSingle").focusin(function() {
+        $("#messageSingle").text("Input focused (Single)");
+      });
+
+      // Using single selector for focusout
+      $("#inputSingle").focusout(function() {
+        $("#messageSingle").text("Input blurred (Single)");
+      });
+
+      // Using multiple selector for focusin
+      $(".inputMultiple").focusin(function() {
+        $(".messageMultiple").text("Input focused (Multiple)");
+      });
+
+      // Using multiple selector for focusout
+      $(".inputMultiple").focusout(function() {
+        $(".messageMultiple").text("Input blurred (Multiple)");
+      });
+    });
+  </script>
+  <style>
+    #messageSingle, .messageMultiple {
+      margin-top: 10px;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="inputSingle" placeholder="Input (Single)">
+<div id="messageSingle"></div>
+
+<input type="text" class="inputMultiple" placeholder="Input (Multiple)">
+<div class="messageMultiple"></div>
+
+</body>
+</html>

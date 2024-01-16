@@ -1,1 +1,22 @@
 <!-- 34.Write a JQuery code to demonstrated key down event in particular tag and id. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a keydown event to a specific tag (in this case, 'input') with a specific ID (in this case, 'myInput')
+      $("input#myInput").keydown(function(event) {
+        alert("Key Down Event - Key Code: " + event.keyCode);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<input type="text" id="myInput" placeholder="Type here">
+
+</body>
+</html>

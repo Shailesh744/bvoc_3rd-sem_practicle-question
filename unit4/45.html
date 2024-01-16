@@ -1,2 +1,56 @@
 <!-- 45.Write a JQuery code to demonstrated first and last methods using single and multiple
 selector]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using single selector for first and last
+      $("#firstLastSingle").click(function() {
+        var firstItem = $(".listSingle li").first().text();
+        var lastItem = $(".listSingle li").last().text();
+        alert("First Item: " + firstItem + "\nLast Item: " + lastItem);
+      });
+
+      // Using multiple selector for first and last
+      $(".firstLastMultiple").click(function() {
+        var firstItem = $(".listMultiple li").first().text();
+        var lastItem = $(".listMultiple li").last().text();
+        alert("First Item: " + firstItem + "\nLast Item: " + lastItem);
+      });
+    });
+  </script>
+  <style>
+    .listSingle, .listMultiple {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      list-style-type: none;
+    }
+
+    .listSingle li, .listMultiple li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<button id="firstLastSingle">Get First and Last Item (Single)</button>
+<ul class="listSingle">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<button class="firstLastMultiple">Get First and Last Item (Multiple)</button>
+<ul class="listMultiple">
+  <li>Item A</li>
+  <li>Item B</li>
+  <li>Item C</li>
+</ul>
+
+</body>
+</html>

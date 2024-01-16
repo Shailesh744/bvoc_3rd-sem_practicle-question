@@ -1,1 +1,22 @@
 <!-- 33.Write a JQuery code to demonstrated click event in particular id. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Attach a click event to an element with a specific ID (in this case, an element with ID 'myElement')
+      $("#myElement").click(function() {
+        alert("Element Clicked!");
+      });
+    });
+  </script>
+</head>
+<body>
+
+<div id="myElement">Click me</div>
+
+</body>
+</html>

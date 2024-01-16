@@ -1,2 +1,54 @@
 <!-- 46.Write a JQuery code to demonstrated event.which, pagex and pagey event property using
 single and multiple selector]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using single selector for event properties
+      $("#singleSelector").on("mousemove", function(event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+        var keyCode = event.which;
+
+        $("#resultSingle").text("Mouse X: " + mouseX + ", Mouse Y: " + mouseY + ", Key Code: " + keyCode);
+      });
+
+      // Using multiple selector for event properties
+      $(".multipleSelector").on("mousemove", function(event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+        var keyCode = event.which;
+
+        $("#resultMultiple").text("Mouse X: " + mouseX + ", Mouse Y: " + mouseY + ", Key Code: " + keyCode);
+      });
+    });
+  </script>
+  <style>
+    #resultSingle, #resultMultiple {
+      margin-top: 10px;
+      color: #3498db;
+    }
+
+    .selectorBox {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="selectorBox" id="singleSelector">Mouse over this box (Single Selector)</div>
+<div id="resultSingle"></div>
+
+<div class="selectorBox multipleSelector">Mouse over this box (Multiple Selector)</div>
+<div class="selectorBox multipleSelector">Mouse over this box too (Multiple Selector)</div>
+<div id="resultMultiple"></div>
+
+</body>
+</html>

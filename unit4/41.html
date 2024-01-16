@@ -1,2 +1,51 @@
 <!-- 41. Write a JQuery code to demonstrated prepend and append methods [using single and
 multiple selector]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using single selector for prepend
+      $("#prependSingle").click(function() {
+        $("#contentSingle").prepend("<p>Prepended Content (Single)</p>");
+      });
+
+      // Using single selector for append
+      $("#appendSingle").click(function() {
+        $("#contentSingle").append("<p>Appended Content (Single)</p>");
+      });
+
+      // Using multiple selector for prepend
+      $(".prependMultiple").click(function() {
+        $(".contentMultiple").prepend("<p>Prepended Content (Multiple)</p>");
+      });
+
+      // Using multiple selector for append
+      $(".appendMultiple").click(function() {
+        $(".contentMultiple").append("<p>Appended Content (Multiple)</p>");
+      });
+    });
+  </script>
+  <style>
+    #contentSingle, .contentMultiple {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<button id="prependSingle">Prepend Content (Single)</button>
+<button id="appendSingle">Append Content (Single)</button>
+<div id="contentSingle">Initial Content (Single)</div>
+
+<button class="prependMultiple">Prepend Content (Multiple)</button>
+<button class="appendMultiple">Append Content (Multiple)</button>
+<div class="contentMultiple">Initial Content (Multiple)</div>
+
+</body>
+</html>

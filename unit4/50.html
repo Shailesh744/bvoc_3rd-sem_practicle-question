@@ -1,1 +1,29 @@
 <!-- 50.Write a JQuery code to demonstrated toggle method. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Using toggle method
+      $("#toggleBtn").click(function() {
+        $("#elementToToggle").toggle();
+      });
+    });
+  </script>
+  <style>
+    #elementToToggle {
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div id="elementToToggle">Click the button to toggle visibility.</div>
+<button id="toggleBtn">Toggle Visibility</button>
+
+</body>
+</html>
