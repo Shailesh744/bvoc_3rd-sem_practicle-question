@@ -1,1 +1,52 @@
 <!-- 65. Write a bootstrap and JQuery code to uses tab plugin. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tab Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <h3>Home Content</h3>
+            <p>This is the home tab content.</p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+            <h3>Profile Content</h3>
+            <p>This is the profile tab content.</p>
+        </div>
+        <div class="tab-pane fade" id="contact">
+            <h3>Contact Content</h3>
+            <p>This is the contact tab content.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

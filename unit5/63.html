@@ -1,1 +1,42 @@
 <!-- 63. Write a bootstrap and JQuery code to uses transition plugin. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Transition Plugin Example</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-4">
+
+  <h2>Bootstrap Transition Plugin Example</h2>
+
+  <!-- Button to trigger the transition -->
+  <button type="button" class="btn btn-primary" id="transitionButton">Toggle Transition</button>
+
+  <!-- Element to apply transition -->
+  <div class="transition-box bg-primary">
+    This is a box with a transition.
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+  // Toggle transition on button click
+  $('#transitionButton').on('click', function() {
+    $('.transition-box').toggleClass('transition-active');
+  });
+});
+</script>
+
+</body>
+</html>
